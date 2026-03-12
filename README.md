@@ -4,6 +4,8 @@ An [Agent Skill](https://agentskills.io) that lets coding agents render rich int
 
 Instead of describing a flowchart or pasting ASCII art, the agent generates a real interactive visual. Diagrams you can click, sliders you can drag, charts that update live.
 
+built by [droid](http://factory.ai/)
+
 ## Installation
 
 **User-level (recommended)**
