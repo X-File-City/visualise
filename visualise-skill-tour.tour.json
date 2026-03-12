@@ -1,0 +1,142 @@
+{
+  "id": "visualise-skill-tour",
+  "title": "Visualise Agent Skill",
+  "description": "Explore how this agent skill enables coding agents to render rich SVG diagrams, interactive HTML widgets, and data charts inline in conversations",
+  "version": "1.0.0",
+  "audience": "Developers & Agent Authors",
+  "prerequisites": [
+    "Basic understanding of agent skills and LLM tool use"
+  ],
+  "steps": [
+    {
+      "id": "step-1-overview",
+      "title": "Project Overview",
+      "description": "Visualise is an agent skill that lets coding agents generate rich visual content — SVG diagrams, HTML widgets, and Chart.js charts — rendered inline in conversations. The entire project is a documentation and instruction system with no build step or runtime code.",
+      "estimatedTime": 60,
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-2-skill-entry",
+      "title": "Skill Entry Point",
+      "description": "SKILL.md is the agent-facing entry point. When an agent loads this skill, it reads SKILL.md first (~100 tokens) to learn activation triggers (visualize, diagram, chart, draw), output constraints (sandboxed iframe, streaming order), and which reference docs to load on demand. This progressive-disclosure pattern keeps token cost low.",
+      "estimatedTime": 90,
+      "focusDirectory": "",
+      "highlightLayers": [
+        {
+          "id": "entry-point",
+          "name": "Skill Entry Point",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "SKILL.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "user-docs",
+          "name": "User Guide",
+          "color": "#6366f1",
+          "items": [
+            { "path": "README.md", "type": "file" }
+          ],
+          "opacity": 0.5,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-3-references",
+      "title": "Reference Library",
+      "description": "The references/ directory contains progressive-disclosure docs that agents load only when needed. design-system.md provides CSS variables and color ramps. diagrams.md covers flowcharts and structural visuals. components.md has interactive HTML patterns. charts.md handles Chart.js and D3 integration. client-implementation.md is the renderer setup guide.",
+      "estimatedTime": 120,
+      "focusDirectory": "references",
+      "highlightLayers": [
+        {
+          "id": "design-foundation",
+          "name": "Design Foundation",
+          "color": "#10b981",
+          "items": [
+            { "path": "references/design-system.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "visual-types",
+          "name": "Visual Type Specs",
+          "color": "#f59e0b",
+          "items": [
+            { "path": "references/diagrams.md", "type": "file" },
+            { "path": "references/components.md", "type": "file" },
+            { "path": "references/charts.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        },
+        {
+          "id": "client-layer",
+          "name": "Client Renderer",
+          "color": "#ef4444",
+          "items": [
+            { "path": "references/client-implementation.md", "type": "file" }
+          ],
+          "opacity": 0.7,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-4-design-system",
+      "title": "Design System",
+      "description": "The design system defines the visual language: 9 color ramps (purple, teal, coral, pink, gray, blue, green, amber, red) with 7 intensity stops each, CSS variables for theming, pre-built SVG classes (.node, .box, .arr), and strict rules — flat design, no gradients, 680px viewBox, 0.5px strokes. This ensures all agent-generated visuals look native and consistent.",
+      "estimatedTime": 90,
+      "focusDirectory": "references",
+      "highlightLayers": [
+        {
+          "id": "design-system-focus",
+          "name": "Design System",
+          "color": "#8b5cf6",
+          "items": [
+            { "path": "references/design-system.md", "type": "file" }
+          ],
+          "opacity": 0.8,
+          "borderWidth": 3
+        }
+      ],
+      "colorMode": "fileTypes"
+    },
+    {
+      "id": "step-5-execution-flow",
+      "title": "How It All Connects",
+      "description": "The execution flow: (1) Agent reads SKILL.md at startup. (2) User asks to visualize something. (3) Agent loads only the needed reference — design-system.md always, plus diagrams/components/charts as required. (4) Agent generates HTML/SVG in a ```visualizer code fence. (5) Client renderer detects the fence, injects theme CSS, renders in a sandboxed iframe. (6) Interactive elements can trigger follow-up messages via sendPrompt().",
+      "estimatedTime": 60,
+      "focusDirectory": "",
+      "highlightLayers": [
+        {
+          "id": "full-pipeline",
+          "name": "Complete Skill",
+          "color": "#3b82f6",
+          "items": [
+            { "path": "SKILL.md", "type": "file" },
+            { "path": "references", "type": "directory" }
+          ],
+          "opacity": 0.6,
+          "borderWidth": 2
+        }
+      ],
+      "colorMode": "fileTypes"
+    }
+  ],
+  "metadata": {
+    "author": "Claude",
+    "createdAt": "2026-03-12T00:00:00.000Z",
+    "tags": [
+      "agent-skill",
+      "visualization",
+      "architecture",
+      "onboarding"
+    ]
+  }
+}
