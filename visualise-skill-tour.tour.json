@@ -90,7 +90,7 @@
     {
       "id": "step-4-design-system",
       "title": "Design System",
-      "description": "The design system defines the visual language: 9 color ramps with 7 intensity stops each, CSS variables for theming, pre-built SVG classes, and strict rules — flat design, no gradients, 680px viewBox, 0.5px strokes. This ensures all agent-generated visuals look native and consistent.",
+      "description": "The design system defines the visual language: 9 color ramps with 7 intensity stops each, CSS variables for theming, pre-built SVG classes, and strict rules — flat design, no gradients, 680 px viewBox, 0.5px strokes. This ensures all agent-generated visuals look native and consistent.",
       "estimatedTime": 90,
       "focusDirectory": "references",
       "highlightLayers": [
