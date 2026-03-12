@@ -90,7 +90,7 @@
     {
       "id": "step-4-design-system",
       "title": "Design System",
-      "description": "The design system defines the visual language: 9 color ramps (purple, teal, coral, pink, gray, blue, green, amber, red) with 7 intensity stops each, CSS variables for theming, pre-built SVG classes (.node, .box, .arr), and strict rules — flat design, no gradients, 680px viewBox, 0.5px strokes. This ensures all agent-generated visuals look native and consistent.",
+      "description": "The design system defines the visual language: 9 color ramps with 7 intensity stops each, CSS variables for theming, pre-built SVG classes, and strict rules — flat design, no gradients, 680px viewBox, 0.5px strokes. This ensures all agent-generated visuals look native and consistent.",
       "estimatedTime": 90,
       "focusDirectory": "references",
       "highlightLayers": [
@@ -110,7 +110,7 @@
     {
       "id": "step-5-execution-flow",
       "title": "How It All Connects",
-      "description": "The execution flow: (1) Agent reads SKILL.md at startup. (2) User asks to visualize something. (3) Agent loads only the needed reference — design-system.md always, plus diagrams/components/charts as required. (4) Agent generates HTML/SVG in a ```visualizer code fence. (5) Client renderer detects the fence, injects theme CSS, renders in a sandboxed iframe. (6) Interactive elements can trigger follow-up messages via sendPrompt().",
+      "description": "The execution flow: (1) Agent reads SKILL.md at startup. (2) User asks to visualize something. (3) Agent loads only the needed reference — design-system.md always, plus diagrams/components/charts as required. (4) Agent generates HTML/SVG in a ```visualizer code fence. (5) Client renderer detects the fence, injects theme CSS, renders in a sandboxed iframe. (6) Interactive elements can trigger follow-up messages via sendPrompt.",
       "estimatedTime": 60,
       "focusDirectory": "",
       "highlightLayers": [
